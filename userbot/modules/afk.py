@@ -1,6 +1,6 @@
 # Copyright (C) 2020 TeamUltroid
-# Ported by X_ImFine
-# Recode by @mrismanaziz
+# Ported by Clown-Fanatic
+# Recode by @FvckMiaw
 
 import asyncio
 from datetime import datetime
@@ -92,12 +92,12 @@ async def on_afk(event):
         msg = None
         if reason:
             message_to_reply = (
-                f"**✘ {owner} Sedang AFK** `{total_afk_time}` **Yang Lalu ✘**\n"
+                f"**✘ {owner} Orang nya Sedang AFK** `{total_afk_time}` **Yang Lalu ✘**\n"
                 + f"**✦҈͜͡➳ Karena :** `{reason}`"
             )
         else:
             message_to_reply = (
-                f"**✘ Maaf {owner} Sedang AFK** `{total_afk_time}` **Yang Lalu ✘**"
+                f"**✘ Maaf {owner} Orang nya Sedang AFK** `{total_afk_time}` **Yang Lalu ✘**"
             )
         try:
             if pic.endswith((".tgs", ".webp")):
@@ -158,18 +158,18 @@ async def _(event):
                     await event.client.send_message(event.chat_id, file=pic)
                     await event.client.send_message(
                         event.chat_id,
-                        f"\n**✘ {owner} Telah AFK ✘**\n**✦҈͜͡➳ Karena :** `{reason}`",
+                        f"\n**✘ {owner} Jangan ganggu gua lagi sibuk ✘**\n**✦҈͜͡➳ Karena :** `{reason}`",
                     )
                 else:
                     await event.client.send_message(
                         event.chat_id,
-                        f"\n**✘ {owner} Telah AFK ✘**\n**✦҈͜͡➳ Karena :** `{reason}`",
+                        f"\n**✘ {owner} Jangan ganggu gua lagi sibuk ✘**\n**✦҈͜͡➳ Karena :** `{reason}`",
                         file=pic,
                     )
             except BaseException:
                 await event.client.send_message(
                     event.chat_id,
-                    f"\n**✘ {owner} Telah AFK ✘**\n**✦҈͜͡➳ Karena :** `{reason}`",
+                    f"\n**✘ {owner} Jangan ganggu gua lagi sibuk ✘**\n**✦҈͜͡➳ Karena :** `{reason}`",
                 )
         else:
             try:
